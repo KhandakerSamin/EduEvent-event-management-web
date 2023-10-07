@@ -1,10 +1,11 @@
 
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 
 const ServiceCard = ({categories}) => {
 
-    const {title,image,long_description,short_description,price} = categories ;
+    const {title,image,long_description,short_description,price,id} = categories ;
 
     return (
         <div className='w-full bg-[#FFECEC] p-3 rounded-lg mb-10'>
@@ -17,7 +18,7 @@ const ServiceCard = ({categories}) => {
             </div>
             <h1 className='font-bold text-2xl mb-3 text-black '>{title} </h1>
             <p className='mb-5 '>{short_description}</p>
-            <button className='btn btn-primary w-full'>Take A Look</button>
+            <Link to={`/details/${id}`}><button className='btn btn-primary w-full'>Take A Look</button></Link>
         </div>
     );
 };
