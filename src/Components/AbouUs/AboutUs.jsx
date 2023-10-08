@@ -13,7 +13,7 @@ const AboutUs = () => {
                 </div>
                 <div className='w-2/3'>
                     <ul>
-                        <h1 className='text-2xl '>What Sets Us Apart:</h1>
+                        <h1 className='text-2xl font-bold text-blue-700'>What Sets Us Apart:</h1>
                         <li>
                             <h4>
                                 <span className='text-xl font-semibold text-blue-700'>1. Expertise:</span> Our team comprises seasoned professionals who are well-versed in every aspect of educational event management. From meticulous content curation to seamless logistics, we've got it all covered.
