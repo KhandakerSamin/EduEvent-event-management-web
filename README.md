@@ -1,6 +1,6 @@
 # Edu Event - Educational Event Management Website
 
-Welcome to **Edu Event**, your one-stop destination for managing educational events with ease. Visit our live site [Click here](crazy-rhythm.surge.sh).
+Welcome to **Edu Event**, your one-stop destination for managing educational events with ease. Visit our live site [Click here](https://crazy-rhythm.surge.sh/).
 
 ## Features and Functionalities
 
