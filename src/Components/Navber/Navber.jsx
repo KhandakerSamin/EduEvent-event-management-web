@@ -2,6 +2,7 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/mainlogo.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
+import swal from 'sweetalert';
 const Navber = () => {
     
     const { user, logOut } = useContext(AuthContext);
@@ -10,6 +11,7 @@ const Navber = () => {
         logOut()
         .then()
         .catch()
+        swal("Signed Out!", "Signed Out Successfully!", "success");
     }
 
     const navLinks = <>
@@ -41,7 +43,7 @@ const Navber = () => {
             </div>
             <div className="navbar-end">
                {
-                user ?  <Link to=''><a onClick={handleSignOut} className="btn  bg-[#562EFE] text-white border-none px-10 py-2 ">Sign Out</a></Link>
+                user ?  <Link to=''><a onClick={handleSignOut} className="btn  bg-[#562EFE] text-white normal-case font-bold text-lg border-none px-10 py-2 ">Sign Out</a></Link>
                 :
                 <Link to='/login'><a className="btn  bg-[#562EFE] text-white border-none px-10 py-2 normal-case text-lg font-bold">Sign In</a></Link>
                }

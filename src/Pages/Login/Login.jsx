@@ -4,6 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from '../../Providers/AuthProvider';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from '../../Firebase/firebase.config';
+import swal from 'sweetalert';
 
 const Login = () => {
 
@@ -41,6 +42,7 @@ const Login = () => {
                 console.log(res);
                 // navigate after login 
                 navigate(location?.state ? location.state : '/')
+                swal("Signed in!", "You Signed in Successfully!", "success");
             })
             .catch(err => {
                 console.log(err);

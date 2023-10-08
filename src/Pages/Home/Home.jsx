@@ -23,7 +23,7 @@ const Home = () => {
                     ></ServiceCard>)
                 }
             </div>
-            <div className="w-2/3">
+            <div className="w-full">
                 <WhyChoose></WhyChoose>
             </div>
             <div>

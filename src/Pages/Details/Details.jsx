@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import swal from 'sweetalert';
+
 
 const Details = () => {
     const {id} = useParams();
@@ -16,6 +18,10 @@ const Details = () => {
     }, [details]);
 
     console.log(info);
+
+    const handleConfirm = () => {
+        swal("Booking Confirmed!", "Thanks For Booking Us!", "success");
+    }
     
 
     return (
@@ -29,7 +35,7 @@ const Details = () => {
             <p>{info.long_description}</p>
             </div>
             <div className="my-10">
-                <button className="btn btn-primary px-5">Confirm Booking</button>
+                <button onClick={handleConfirm} className="btn normal-case font-bold text-xl btn-primary px-5">Confirm Booking</button>
             </div>
         </section>
     );
