@@ -3,11 +3,11 @@ import Root from "../Layout/Root";
 import Home from "../Pages/Home/Home";
 import Blog from "../Pages/Others/Blog";
 import About from "../Pages/Others/About";
-import Services from "../Pages/Others/Services";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Details from "../Pages/Details/Details";
 import PrivateRoute from "./PrivateRoute";
+import Career from "../Pages/Others/Career";
 
 
 const router = createBrowserRouter([
@@ -29,8 +29,8 @@ const router = createBrowserRouter([
             element:<About></About>
         },
         {
-            path:'/services',
-            element:<Services></Services>
+            path:'/career',
+            element:<PrivateRoute><Career></Career></PrivateRoute>
         },
         {
             path:'/login',

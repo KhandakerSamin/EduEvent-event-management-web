@@ -3,6 +3,7 @@ import logo from '../../assets/mainlogo.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import swal from 'sweetalert';
+import userImg from '../../assets/user.png'
 const Navber = () => {
     
     const { user, logOut } = useContext(AuthContext);
@@ -18,7 +19,7 @@ const Navber = () => {
     <li><NavLink to='/'>Home</NavLink></li>
     <li><NavLink to='/about'>About</NavLink></li>
     <li><NavLink to='/blog'>Blog</NavLink></li>
-    <li><NavLink to='/services'>Services</NavLink></li>
+    <li><NavLink to='/career'>Career</NavLink></li>
 
     </>
     return (
@@ -42,6 +43,9 @@ const Navber = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                <div>
+                    <img className='w-10 h-10 mr-4' src={userImg} alt="" />
+                </div>
                {
                 user ?  <Link to=''><a onClick={handleSignOut} className="btn  bg-[#562EFE] text-white normal-case font-bold text-lg border-none px-10 py-2 ">Sign Out</a></Link>
                 :

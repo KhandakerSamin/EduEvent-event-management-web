@@ -19,9 +19,10 @@ const Login = () => {
 
     const handleGoogleLogin = () => {
 
-        signInWithPopup()
+        signInWithPopup(auth, provider)
             .then(res => {
                 console.log(res);
+                swal("Signed in!", "You Signed in Successfully!", "success");
             })
             .catch(err => {
                 console.log(err);
@@ -46,6 +47,8 @@ const Login = () => {
             })
             .catch(err => {
                 console.log(err);
+                swal("Sorry !!", "Invalid Email Or Password!", "error");
+
             })
 
     }
@@ -73,7 +76,7 @@ const Login = () => {
                         <button className="btn bg-[#562EFE] normal-case text-lg font-bold w-full text-white hover:text-black " type="submit">Login</button>
                     </div>
                 </form>
-                    <button className="btn btn-outline normal-case text-lg font-bold bg-white w-full mt-2 mb-2 border-none text-black">
+                    <button onClick={handleGoogleLogin} className="btn btn-outline normal-case text-lg font-bold bg-white w-full mt-2 mb-2 border-none text-black">
                         <FcGoogle className="text-xl"></FcGoogle>
                         Continue with google
                     </button>

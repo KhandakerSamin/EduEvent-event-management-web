@@ -28,7 +28,7 @@ const AboutUs = () => {
                             </li>
                             <li>
                                 <h4 className='text-2xl'>
-                                    <span className='text-3xl font-semibold text-blue-700'>2. Tailored Solutions:</span> We understand that every educational event is unique. That's why we work closely with you to tailor our services to your specific needs and goals.
+                                    <span className='text-3xl font-semibold text-blue-700'>2. Tailored Solutions:</span> We understand that every educational event is unique. That's why we work closely with you to tailor our services .
                                 </h4>
                             </li>
                             <li>
@@ -38,7 +38,7 @@ const AboutUs = () => {
                             </li>
                             <li>
                                 <h4 className='text-2xl'>
-                                    <span className='text-3xl font-semibold text-blue-700'>4. Comprehensive Support:</span> From marketing strategies that boost attendance to flawless on-site execution, we handle every detail to ensure your event's success..
+                                    <span className='text-3xl font-semibold text-blue-700'>4. Comprehensive Support:</span> From marketing strategies that boost attendance to flawless on-site execution, we handle every detail ...
                                 </h4>
                             </li>
                         </ul>

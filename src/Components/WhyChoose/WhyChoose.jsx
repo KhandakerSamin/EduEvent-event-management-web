@@ -5,7 +5,7 @@ const WhyChoose = () => {
         <section>
             <h1 className="font-bold text-5xl text-[#562EFE] mt-16 mb-10">Why Choose us?</h1>
             <div className='flex items-center justify-center gap-x-14'>
-                <div className='md:col-span-2 w-full'>
+                <div className='md:col-span-2 w-full flex-shrink'>
                     <div className="collapse w-full collapse-arrow mb-4 bg-base-200">
                         <input type="radio" name="my-accordion-2" />
                         <div className="collapse-title text-xl font-medium">
@@ -43,7 +43,7 @@ const WhyChoose = () => {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className='ml-10'>
                     <img className='w-10/12 mb-3' src={img} alt="" />
                 </div>
             </div>
