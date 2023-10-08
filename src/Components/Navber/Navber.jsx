@@ -43,7 +43,7 @@ const Navber = () => {
                {
                 user ?  <Link to=''><a onClick={handleSignOut} className="btn  bg-[#562EFE] text-white border-none px-10 py-2 ">Sign Out</a></Link>
                 :
-                <Link to='/login'><a className="btn  bg-[#562EFE] text-white border-none px-10 py-2 ">Sign In</a></Link>
+                <Link to='/login'><a className="btn  bg-[#562EFE] text-white border-none px-10 py-2 normal-case text-lg font-bold">Sign In</a></Link>
                }
             </div>
         </div>

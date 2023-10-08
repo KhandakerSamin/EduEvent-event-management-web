@@ -18,7 +18,7 @@ const ServiceCard = ({categories}) => {
             </div>
             <h1 className='font-bold text-2xl mb-3 text-black '>{title} </h1>
             <p className='mb-5 '>{short_description}</p>
-            <Link to={`/details/${id}`}><button className='btn btn-primary w-full'>Take A Look</button></Link>
+            <Link to={`/details/${id}`}><button className='btn normal-case text-lg font-bold btn-primary w-full'>Take A Look</button></Link>
         </div>
     );
 };
