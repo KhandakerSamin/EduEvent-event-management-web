@@ -13,9 +13,11 @@ const Home = () => {
 
     return (
         <div>
+            <div className="mx-2">
             <Banner></Banner>
-            <h1 className="font-bold text-5xl text-[#562EFE] mt-16 mb-10">Services</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8">
+            </div>
+            <h1 className="font-bold text-5xl text-[#562EFE] mt-16 mb-10 ml-3">Services</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 mx-4">
                 {
                     categories.map(category => <ServiceCard
                         key={category.id}
@@ -29,7 +31,7 @@ const Home = () => {
             <div>
                 <AboutUs></AboutUs>
             </div>
-            <footer className="mb-16 w-full">
+            <footer className="md:mb-16 w-full">
                 <Footer></Footer>
             </footer>
         </div>

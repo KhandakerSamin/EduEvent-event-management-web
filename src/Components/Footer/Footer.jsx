@@ -4,16 +4,18 @@ import logo from '../../assets/footerlog.png'
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-[#562EFE] text-base-content">
-                <nav>
-                    <header className="font-bold text-2xl  text-white">Services</header>
-                    <a className="link text-white link-hover">Branding</a>
-                    <a className="link text-white link-hover">Design</a>
-                    <a className="link text-white link-hover">Marketing</a>
-                    <a className="link text-white link-hover">Advertisement</a>
+            <footer className="footer flex flex-row  justify-between items-center p-10 bg-[#562EFE] text-base-content">
+                <nav className=' flex-col'>
+                <header className=" font-bold text-2xl text-white">Services</header>
+
+                    <a class="link  text-white link-hover">Branding</a>
+                    <a class="link  text-white link-hover">Design</a>
+                    <a class="link  text-white link-hover">Marketing</a>
+                    <a class="link  text-white link-hover">Advertisement</a>
                 </nav>
+
                 <nav>
-                    <header className=" font-bold text-2xl text-white">Company</header>
+                <header className=" font-bold text-2xl text-white">Company</header>
                     <a className="link text-white link-hover">About us</a>
                     <a className="link text-white link-hover">Contact</a>
                     <a className="link text-white link-hover">Jobs</a>
@@ -26,10 +28,10 @@ const Footer = () => {
                     <a className="link text-white link-hover">Cookie policy</a>
                 </nav>
             </footer>
-            <footer className="footer px-10 py-4  bg-[#562EFE] text-base-content border-base-300">
+            <footer className="footer px-10 py-4 flex flex-row justify-between items-center   bg-[#562EFE] text-base-content border-base-300">
                 <aside className="items-center grid-flow-col">
-                    <div className='w-1/6 h-[80px]'>
-                        <img className='h-[50px] w-[800px]' src={logo} alt="" />
+                    <div className='w-3/6 md:w-1/6 h-[80px]'>
+                        <img className='h-[50px] w-[1200px]' src={logo} alt="" />
                     </div>
                 </aside>
                 <nav className="md:place-self-center md:justify-self-end">

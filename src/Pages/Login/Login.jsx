@@ -54,7 +54,7 @@ const Login = () => {
     }
 
     return (
-        <div className="">
+        <div className=" mx-4">
             <div className="card  flex-shrink-0 rounded-lg w-full max-w-xl bg-[#FEEBEB]  mx-auto  my-20">
                 <h1 className="text-center text-4xl font-semibold mt-12  mx-16 pb-10">Login your account </h1>
                 <div className="card-body mx-8">

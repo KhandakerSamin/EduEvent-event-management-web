@@ -75,20 +75,7 @@ const CareerPage = () => {
             </div>
           ))}
         </div>
-{/*         
-        <p
-          className="text-lg text-gray-700 mt-8"
-          data-aos="fade-up"
-        >
-          We are a company dedicated to fostering growth and innovation. Our team is diverse, and we believe in providing equal opportunities to all. Join us on our mission to make a difference.
-        </p>
 
-        <p
-          className="text-lg text-gray-700 mt-8"
-          data-aos="fade-up"
-        >
-          Interested in a career with us? Explore our current job openings above and apply today. We look forward to having you as part of our team!
-        </p> */}
       </div>
     </div>
   );

@@ -3,8 +3,8 @@ import img2 from '../../assets/positive-lettering-concept_23-2148463395.jpg'
 const WhyChoose = () => {
     return (
         <section>
-            <h1 className="font-bold text-5xl text-[#562EFE] mt-16 mb-10">Why Choose us?</h1>
-            <div className='flex items-center justify-center gap-x-14'>
+            <h1 className="font-bold text-5xl text-[#562EFE] mt-16 mb-10 ml-2">Why Choose us?</h1>
+            <div className='flex flex-col md:flex-row items-center justify-center gap-x-14 p-3'>
                 <div className='md:col-span-2 w-full flex-shrink'>
                     <div className="collapse w-full collapse-arrow mb-4 bg-base-200">
                         <input type="radio" name="my-accordion-2" />
