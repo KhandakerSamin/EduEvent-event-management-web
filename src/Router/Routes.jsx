@@ -7,12 +7,14 @@ import Register from "../Pages/Register/Register";
 import Details from "../Pages/Details/Details";
 import PrivateRoute from "./PrivateRoute";
 import Career from "../Pages/Others/Career";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement:<ErrorPage></ErrorPage>,
       children: [
         {
             path:'/',

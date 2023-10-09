@@ -10,7 +10,7 @@ const Banner = () => {
 
   return (
     <div
-      className='bg-cover bg-center h-[600px] md:h-[400px] lg:h-[600px] xl:h-[800px] w-full'
+      className='bg-cover bg-center h-[600px] md:h-[400px] lg:h-[600px] xl:h-[600px] w-full'
       style={{ backgroundImage: `url(${img})` }}
       data-aos='fade'
       data-aos-duration='5000'

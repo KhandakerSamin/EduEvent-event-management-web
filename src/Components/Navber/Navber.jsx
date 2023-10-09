@@ -5,20 +5,21 @@ import { AuthContext } from '../../Providers/AuthProvider';
 import swal from 'sweetalert';
 import userImg from '../../assets/user.png'
 const Navber = () => {
-    
+
     const { user, logOut } = useContext(AuthContext);
+    console.log(user);
 
     const handleSignOut = () => {
         logOut()
-        .then()
-        .catch()
+            .then()
+            .catch()
         swal("Signed Out!", "Signed Out Successfully!", "success");
     }
 
     const navLinks = <>
-    <li><NavLink  to='/'>Home</NavLink></li>
-    <li><NavLink to='/blog'>Blog</NavLink></li>
-    <li><NavLink to='/career'>Career</NavLink></li>
+        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/blog'>Blog</NavLink></li>
+        <li><NavLink to='/career'>Career</NavLink></li>
     </>
 
     return (
@@ -33,7 +34,7 @@ const Navber = () => {
                     </ul>
                 </div>
                 <div>
-                    <img className='w-36 h-14' src={logo} alt="" />
+                    <img className='w-24 md:w-36 h-9 md:h-14' src={logo} alt="" />
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -42,14 +43,30 @@ const Navber = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <div>
+                {user && (
+                    <p className='font-semibold text-blue-700 hidden md:block mr-3'>
+                        {user.displayName || "User"} {/* Use "User" as a fallback */}
+                    </p>
+                )}
+                <div>{user ?
+                    <img className='rounded-full w-[35px] md:w-[50px] h-[35px] md:h-[50px] mr-5' src={user.photoURL} alt="" />
+                    :
                     <img className='w-10 h-10 mr-4' src={userImg} alt="" />
+                }
                 </div>
-               {
-                user ?  <Link to=''><a onClick={handleSignOut} className="btn  bg-[#562EFE] text-white normal-case font-bold text-lg border-none px-5 py-2 ">Sign Out</a></Link>
-                :
-                <Link to='/login'><a className="btn  bg-[#562EFE] text-white border-none px-5 py-2 normal-case text-lg font-bold">Sign In</a></Link>
-               }
+
+                {
+                    user ? (
+                        <Link to=''>
+                            <a onClick={handleSignOut} className="btn  bg-[#562EFE] text-white normal-case font-bold text-md md:text-lg  border-none px-3 md:px-5  ">Sign Out</a>
+                        </Link>
+                    ) : (
+                        <Link to='/login'>
+                            <a className="btn  bg-[#562EFE] text-white border-none px-3 md:px-5 normal-case text-md md:text-lg font-bold">Sign In</a>
+                        </Link>
+                    )
+                }
+
             </div>
         </div>
     );

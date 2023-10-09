@@ -23,6 +23,7 @@ const Login = () => {
             .then(res => {
                 console.log(res);
                 swal("Signed in!", "You Signed in Successfully!", "success");
+                navigate(location?.state? location.state: '/');
             })
             .catch(err => {
                 console.log(err);

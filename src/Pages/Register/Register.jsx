@@ -1,11 +1,16 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import swal from 'sweetalert';
+import { getAuth, updateProfile } from "firebase/auth";
+import app from "../../Firebase/firebase.config";
 
 const Register = () => {
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser,updateimgName  } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const auth = getAuth(app);
 
 
     const handleRegister = e => {
@@ -36,15 +41,22 @@ const Register = () => {
 
         // create user
 
-        createUser(email, password)
+        createUser(email, password, photo)
             .then(res => {
-                console.log(res.user)
-                swal("Registration Complete", "Please Sign In!", "success");
+                updateimgName(name, photo)
+                    .then(res => {
+                        console.log(res);
+                        swal("Registration Complete", "Please Sign In!", "success");
+                        navigate(location?.state? location.state: '/');
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    })
             })
             .catch(err => {
                 console.log(err)
+                return swal("Opps !! ", "This Email Already Used", "error");
             })
-
     }
 
     return (
@@ -62,7 +74,7 @@ const Register = () => {
                         <label className="label">
                             <span className="label-text text-xl font-semibold">Photo URL</span>
                         </label>
-                        <input type="text" name="photo" placeholder="Enter your photo url" className="input input-bordered rounded-md" required />
+                        <input type="url" name="photo" placeholder="Enter your photo url" className="input input-bordered rounded-md" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -81,7 +93,7 @@ const Register = () => {
                         <p className="font-semibold">Accept <Link className="text-[#562EFE]">Term & Conditions</Link></p>
                     </div>
                     <div className="form-control w-full mt-6">
-                        <button type="submit" className="btn bg-[#562EFE] w-full  text-white hover:text-black ">Register</button>
+                        <button type="submit" className="btn bg-[#562EFE] w-full normal-case text-lg text-white hover:text-black ">Register</button>
                     </div>
                     <div>
                         <h1 className="font-semibold text-base text-center mb-8 mt-2">Already Have An Account ? <Link to='/login' className="text-[#562EFE]">Login</Link></h1>
