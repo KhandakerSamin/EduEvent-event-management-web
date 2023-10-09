@@ -29,7 +29,10 @@ const Blog = () => {
         <div className="p-4 md:p-8">
             <div className='h-[300px] md:h-[600px] w-full mb-6 md:mb-10' style={{ backgroundImage: `url(${img})` }}>
                 <div className='pt-24 md:pt-96'>
-                    <h1 className='text-3xl md:text-5xl font-bold text-black text-center md:tex-center '>Your Journey to Educational Event <br /> Excellence Begins Here! <br /><span className='text-4xl md:text-6xl font-bold text-blue-700 mt-3'>Edu Event</span></h1>
+                    <div className='bg-white mx-36 py-3'>
+                        <h1 className='text-3xl  md:text-5xl font-bold text-black text-center md:tex-center '>Your Journey to Educational Event <br /> Excellence Begins Here! <br /></h1>
+                    </div>
+                    <h1 className='text-4xl text-center mb-5 md:text-6xl font-bold text-blue-700 mt-3'>Edu Event</h1>
                 </div>
             </div>
             <h1 className="text-2xl md:text-3xl text-blue-700 font-bold mb-4">Welcome to the Edu Event Blog</h1>

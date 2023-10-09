@@ -5,7 +5,7 @@ const AboutUs = () => {
         <div className="mb-20 p-2">
             < h1 className="font-bold text-5xl text-[#562EFE] mt-16 mb-10">About Us</h1>
             <div className='w-full'>
-                <div className='w-full flex flex-col md:flex-row items-center justify-center'>
+                <div className='w-full flex flex-col lg:flex-row items-center justify-center'>
                     <div className='w-full flex justify-center'>
                         <img className='w-3/4 ' src={img} alt="" />
                     </div>
@@ -17,7 +17,7 @@ const AboutUs = () => {
                     </div>
 
                 </div>
-                <div className='w-full flex flex-col md:flex-row items-center justify-center gap-16 mx-2' >
+                <div className='w-full flex flex-col lg:flex-row items-center justify-center gap-16 mx-2' >
                     <div className='my-10 mr-4'>
                         <ul className='text-justify'>
                             <h1 className='text-3xl font-bold text-blue-700'>What Sets Us Apart:</h1>

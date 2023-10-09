@@ -26,18 +26,19 @@ const Register = () => {
 
         // Check if the input has less than 6 characters
         if (password.length < 6) {
-            return swal("Opps !!", "Total length of password at least 6 characters", "error");
+            return swal("Oops!!", "Total length of password should be at least 6 characters", "error");
         }
-
+        
         // Check if the input contains at least one capital letter
         if (!/[A-Z]/.test(password)) {
-            return swal("Opps !!", "Give at least one capital letter ", "error");
+            return swal("Oops!!", "Include at least one capital letter", "error");
         }
-
+        
         // Check if the input contains any special characters
-        if (/[!@#$%^&*()_+{}\[\]:;<>,.?~\\]/.test(password)) {
-            return swal("Opps !!", "Give at least one special character ", "error");
+        if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\]/.test(password)) {
+            return swal("Oops!!", "Include at least one special character", "error");
         }
+        
 
         // create user
 

@@ -18,7 +18,7 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: B?
+#### Answer: B: ReferenceError: greetign is not defined
 
 <i>Explanation: There's a typographical error in the code. Instead of declaring and initializing the variable greeting, it's declared as greetign, which is a different identifier. Therefore, when you try to log greetign, it results in a ReferenceError because greetign is not defined.</i>
 
@@ -43,7 +43,7 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: D ?
+#### Answer: D: 3
 
 <i>Explanation: JavaScript is a weakly typed language, and it performs type coercion when using the + operator. In this case, it converts the number 1 to a string to perform the concatenation with the string "2". So, the expression becomes "1" + "2", which results in the string "12". When you return this value, it is "12", which is a string.</i>
 
@@ -69,7 +69,7 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: A ?
+#### Answer: A: ['🍕', '🍫', '🥑', '🍔']
 
 <i>Explanation: The info.favoriteFood property initially references the first element of the food array, which is "🍕". Later, when you update info.favoriteFood to "🍝", it doesn't affect the food array. Therefore, food remains unchanged, and it logs ['🍕', '🍫', '🥑', '🍔'].</i>
 
@@ -94,7 +94,7 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: B ?
+#### Answer: B: Hi there, undefined
 
 <i>Explanation: The sayHi function expects a name argument, but when you call it without passing any arguments as sayHi(), name is undefined. Therefore, the function returns "Hi there, undefined" where undefined is the value of the name parameter.</i>
 
@@ -122,7 +122,7 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: A ?
+#### Answer: A: 1
 
 <i>Explanation: The forEach method iterates over the nums array, and for each element, it checks if the element is truthy (i.e., not equal to 0 in JavaScript). Since only the element 1 is truthy in the nums array, the count variable is incremented once, resulting in a final value of 1.</i>
 
