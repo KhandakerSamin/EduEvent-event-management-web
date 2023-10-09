@@ -40,7 +40,7 @@ const Blog = () => {
             <h2 className="text-xl md:text-2xl font-bold text-blue-700 mt-8 mb-4">Latest Posts</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {posts.map((post, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-4 md:p-6 flex flex-col md:flex-row items-center" >
+                    <div key={index} className="bg-[#FFECEC] rounded-lg shadow-lg p-4 md:p-6 flex flex-col md:flex-row items-center" >
                         <div className="md:flex-shrink-0">
                             <img src={post.imageUrl} alt={post.title} className="w-full md:w-64 h-48 md:h-auto object-cover rounded-lg" />
                         </div>

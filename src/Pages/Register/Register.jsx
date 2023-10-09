@@ -43,7 +43,7 @@ const Register = () => {
 
         createUser(email, password, photo)
             .then(res => {
-                updateimgName(name, photo)
+                updateimgName(photo,name)
                     .then(res => {
                         console.log(res);
                         swal("Registration Complete", "Please Sign In!", "success");

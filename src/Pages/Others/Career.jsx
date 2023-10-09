@@ -51,7 +51,7 @@ const CareerPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {jobOpenings.map((job) => (
             <div
-              className="bg-white rounded-lg shadow-lg p-6"
+              className="bg-[#FFECEC] rounded-lg shadow-lg p-6"
               data-aos="fade-up"
               key={job.id}
             >
